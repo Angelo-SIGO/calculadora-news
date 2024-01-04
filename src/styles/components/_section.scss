@@ -1,0 +1,23 @@
+.card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    gap: 10px;
+
+    &#display {
+        padding: 30px;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 0 0;
+
+        &, &-content {
+            width: 100%;
+        }
+    }
+}
