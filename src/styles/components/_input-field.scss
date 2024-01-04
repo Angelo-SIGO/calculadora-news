@@ -1,0 +1,86 @@
+@use "../abstracts" as *;
+
+.input-field {
+    position: relative;
+
+    & input {
+        height: 32px;
+        padding-right: 32px;
+        
+        border: 2px solid $input-border;
+        border-radius: 8px;
+        background-color: transparent;
+
+        font: $default-font;
+        color: $gondola;
+
+        transition: border-color 100ms;
+
+        &:hover {
+            border-color: $input-hover;
+        }
+
+        &:focus {
+            border: 2px solid $input-active;
+            outline: 0;
+        }
+        
+        & ~ * {
+            display: none;
+        }
+    }
+
+    &--complete {
+        position: relative;
+
+        & input {
+            height: 32px;
+            padding-right: 32px;
+            
+            border: 2px solid $input-success;
+            border-radius: 8px;
+            background-color: transparent;
+            outline: 0;
+            
+            font: $default-font;
+            color: $gondola;
+            
+            transition: border-color 100ms;
+            
+            & ~ * {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+        }
+
+    }
+    
+    &--error {
+        position: relative;
+
+        & input {
+            height: 32px;
+            padding-right: 32px;
+            
+            border: 2px solid $input-error;
+            border-radius: 8px;
+            background-color: transparent;
+            outline: 0;
+            
+            font: $default-font;
+            color: $gondola;
+            
+            transition: border-color 100ms;
+            
+            & ~ * {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+        }
+
+    }
+}
