@@ -1,4 +1,4 @@
-@use '../abstracts' as variables;
+@use '../abstracts' as *;
 
 .button {
     position: relative;
@@ -28,20 +28,20 @@
     -webkit-transition: 0.08s ease-in;
 
     &--filled {
-        background-color: variables.$primary;
-        color: variables.$on-primary;
+        background-color: $button-background;
+        color: $button-text-color;
 
-        &:hover { background-color: variables.$primary-hover; }
+        &:hover { background-color: $button-hover; }
 
-        &:active { background-color: variables.$primary-focus; }
+        &:active { background-color: $button-active; }
     }
 
     &--outline {
-        border: 4px solid variables.$primary;
-        color: variables.$primary;
+        border: 4px solid $outline-button-border;
+        color: $outline-button-text-color;
 
         &:hover {
-            color: variables.$on-primary;
+            color: $button-text-color;
 
             &::before {
                 top: 0;
@@ -51,7 +51,7 @@
         &::before {
             content: "";
             position: absolute;
-            background-color: variables.$primary;
+            background-color: $button-background;
             bottom: 0;
             left: 0;
             right: 0;

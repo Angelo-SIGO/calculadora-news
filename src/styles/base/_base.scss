@@ -1,4 +1,4 @@
-@use "../abstracts" as variables;
+@use "../abstracts" as *;
 
 #app {
     display: flex;
@@ -8,7 +8,7 @@
     height: 100svh;
     padding: 50px;
 
-    background-color: variables.$surface-1;
+    background-color: $app-background;
     
-    font: variables.$default-font;
+    font: $default-font;
 }
