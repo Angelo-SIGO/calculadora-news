@@ -1,0 +1,30 @@
+@use "../abstracts/" as variables;
+
+input[type="radio"] + .radio-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    width: 160px;
+    padding: 4px 16px;
+
+    cursor: pointer;
+    border-radius: 32px;
+    border: 2px solid variables.$on-surface;
+
+    font-weight: 700;
+    color: variables.$on-surface;
+
+    transition: background-color 110ms;
+}
+
+input[type="radio"]:checked + .radio-button {
+    padding: 6px 18px;
+
+    cursor: default;
+    background-color: variables.$primary;
+    border: none;
+
+    color: variables.$on-primary;
+}
