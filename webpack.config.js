@@ -5,7 +5,7 @@ const __dirname = new URL('.', import.meta.url).pathname;
 
 export default {
     mode: 'development',
-    entry: `${__dirname}/src/main.js`,
+    entry: `${__dirname}/src/index.js`,
     output: {
         filename: 'bundle.js'
     },
@@ -21,6 +21,10 @@ export default {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack']
             }
         ]
     },

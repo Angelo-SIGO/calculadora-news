@@ -1,7 +1,6 @@
 import React from "react";
+import Button from "./components/inputs/Button";
 
-function App() {
-    return (<h1>Wassup Dude?</h1>)
+export default function App() {
+    
 }
-
-export default App;

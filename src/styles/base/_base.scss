@@ -1,0 +1,14 @@
+@use "../abstracts" as variables;
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100svh;
+    padding: 50px;
+
+    background-color: variables.$surface-1;
+    
+    font: variables.$default-font;
+}
