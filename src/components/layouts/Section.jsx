@@ -7,22 +7,34 @@ export default function Section({ id, children }) {
 }
 
 // MainSection.jsx
-export function MainSection() {
+export function MainSection({onTotalScoreChange}) {
     return (
         <Section id="main">
             <h1>Calculadora NEWS</h1>
-            <MainSectionBody />
+            <MainSectionBody onTotalScoreChange={onTotalScoreChange} />
         </Section>
     );
 }
 
 // DisplaySection.jsx
-export function DisplaySection({ riskLevel }) {
+export function DisplaySection({ totalScore }) {
     const riskText = {
         green: "baixo",
         yellow: "médio",
         red: "alto",
     };
+
+    const riskLevel = determineRiskLevel(totalScore);
+
+    function determineRiskLevel(score) {
+        if (score >= 5) {
+            return "red";
+        } else if (score >= 3) {
+            return "yellow";
+        } else {
+            return "green";
+        }
+    }
 
     return (
         <Section id="display">
@@ -31,17 +43,18 @@ export function DisplaySection({ riskLevel }) {
                 <h2>
                     Paciente com <span>{riskText[riskLevel]}</span> risco de deterioração clínica.
                 </h2>
+                <h2>{totalScore}</h2>
             </section>
         </Section>
     );
 }
 
 // MainSectionBody.jsx
-function MainSectionBody() {
+function MainSectionBody({onTotalScoreChange}) {
     return (
         <div className="card-section__body">
             <section className="card-section__body-content">
-                <Form />
+                <Form onTotalScoreChange={onTotalScoreChange} />
             </section>
         </div>
     );
