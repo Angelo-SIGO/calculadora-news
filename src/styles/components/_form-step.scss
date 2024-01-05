@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.form-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    hr {
+        width: 100%;
+        border: 1px solid $mercury;
+    }
+}

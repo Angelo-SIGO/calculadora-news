@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+input[type="radio"] {
+    display: none;
+}
+
 input[type="radio"] + .radio-button {
     display: flex;
     justify-content: center;
