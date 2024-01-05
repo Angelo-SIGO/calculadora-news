@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+.form-field {
+
+    gap: 10px;
+    
+    &, &__label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: stretch;
+    }
+
+    &__label {
+        font-weight: 700;
+    }
+
+    &__hint {
+        font-weight: 550;
+        color: $gray;
+    }
+}

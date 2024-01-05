@@ -26,5 +26,5 @@ input[type="radio"]:checked + .radio-button {
     background-color: $radio-checked-background;
     border: none;
 
-    color: $radio-text-color;
+    color: $radio-checked-text-color;
 }

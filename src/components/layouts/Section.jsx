@@ -1,5 +1,6 @@
 import React from "react";
 import StepsCounter from "../form/StepsCounter";
+import Form from "./Form";
 
 export default function Section({ id, children }) {
     return <section id={id} className="card-section">{children}</section>
@@ -27,6 +28,7 @@ function SectionBody() {
         <div className="card-section__body">
             <section className="card-section__body-content">
                 <StepsCounter steps={2} />
+                <Form />
             </section>
         </div>
     )

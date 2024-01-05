@@ -5,7 +5,8 @@
 
     & input {
         height: 32px;
-        padding-right: 32px;
+        width: 100%;
+        padding: 10px 32px 10px 10px;
         
         border: 2px solid $input-border;
         border-radius: 8px;
@@ -35,7 +36,10 @@
 
         & input {
             height: 32px;
-            padding-right: 32px;
+            width: 100%;
+
+            padding: 10px 32px 10px 10px;
+
             
             border: 2px solid $input-success;
             border-radius: 8px;
@@ -50,7 +54,7 @@
             & ~ * {
                 position: absolute;
                 top: 50%;
-                right: 10px;
+                right: 6px;
                 transform: translateY(-50%);
             }
         }
@@ -62,7 +66,10 @@
 
         & input {
             height: 32px;
-            padding-right: 32px;
+            width: 100%;
+
+            padding: 10px 32px 10px 10px;
+
             
             border: 2px solid $input-error;
             border-radius: 8px;
@@ -77,7 +84,7 @@
             & ~ * {
                 position: absolute;
                 top: 50%;
-                right: 10px;
+                right: 6px;
                 transform: translateY(-50%);
             }
         }
