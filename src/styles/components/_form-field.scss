@@ -2,6 +2,11 @@
 
 .form-field {
 
+    & ~ hr {
+        width: 100%;
+        border: 1px solid $mercury;
+    }
+
     gap: 10px;
     
     &, &__label {
