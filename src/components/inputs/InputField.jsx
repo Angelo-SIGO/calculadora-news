@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import SuccessIcon from "../../assets/icons/icon-success.svg"
-import ErrorIcon from "../../assets/icons/icon-error.svg"
+import SuccessIcon from "../../assets/icons/icon-success.svg";
+import ErrorIcon from "../../assets/icons/icon-error.svg";
 
-export default function NumberField({ id, children }) {
+export default function NumberField({ id, onValueChange }) {
     const [value, setValue] = useState("");
     const [state, setState] = useState("");
 
@@ -17,23 +17,29 @@ export default function NumberField({ id, children }) {
             setState(hasNumbers ? "--complete" : "--error");
         }
         setValue(numericValue);
+
+        // Chame a função de callback para informar o valor alterado
+        if (onValueChange) {
+            onValueChange(numericValue);
+        }
     };
 
     const handleBlur = () => {
         const hasNumbers = /\d/.test(value);
         setState(
-            (!hasNumbers || !value  || state === "--error") ? "--error" : state
+            (!hasNumbers || !value || state === "--error") ? "--error" : state
         );
     };
 
     return (
         <div id={id} className={`input-field${state}`}>
-            <input 
+            <input
                 type="text"
-                value={value} 
+                value={value}
                 onChange={handleChange}
-                onBlur={handleBlur} />
-            {state === "--complete" && <SuccessIcon/>}
+                onBlur={handleBlur}
+            />
+            {state === "--complete" && <SuccessIcon />}
             {state === "--error" && <ErrorIcon />}
         </div>
     );

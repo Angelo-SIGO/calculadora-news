@@ -1,7 +1,7 @@
 import React from "react";
 import RadioButton from "./RadioButton";
 
-export default function RadioGroup({ name, options }) {
+export default function RadioGroup({ name, options}) {
     return (
         <section className="radio-group">
             {options.map((option) => (
