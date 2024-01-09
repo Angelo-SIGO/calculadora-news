@@ -6,6 +6,7 @@
         & .wrapper {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 10px;
 
             position: sticky;
@@ -46,10 +47,17 @@
 
 .card-section__caption {
     margin: 0;
-    width: 370px;
     font-weight: 700;
+    font-size: 1.3rem;
 
     span {
+        font-weight: 880;
         text-transform: uppercase;
     }
+}
+
+.card-section__description {
+    width: 460px;
+    align-self: stretch;
+    font-size: 1.08rem;
 }
