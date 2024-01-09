@@ -18,6 +18,7 @@ function Form({ onTotalScoreChange }) {
     oxygenSaturationScore,
     consciusnessLevelScore,
     oxygenSuplementationScore,
+    extremeScore,
     handleTemperatureScoreChange,
     handleHeartRateScoreChange,
     handleBloodPressureScoreChange,
@@ -30,7 +31,7 @@ function Form({ onTotalScoreChange }) {
 
     useEffect(() => {
         const totalScore = getTotalScore();
-        onTotalScoreChange(totalScore);
+        onTotalScoreChange(totalScore, extremeScore);
     }, [
         temperatureScore,
         heartRateScore,

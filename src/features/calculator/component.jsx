@@ -6,11 +6,11 @@ import Form from "../../components/form";
 import useTotalScore from "../../hooks/useTotalScore";
 
 function Calculator() {
-    const { totalScore, handleTotalScoreChange } = useTotalScore();
+    const { totalScore, extremeScore, handleTotalScoreChange } = useTotalScore();
 
     return (
         <Card>
-            <Display newsScore={totalScore} />
+            <Display newsScore={totalScore} extremeScore={extremeScore} />
             <CardSection id="main">
                 <h1>Calculadora NEWS</h1>
                 <Form onTotalScoreChange={handleTotalScoreChange} />
