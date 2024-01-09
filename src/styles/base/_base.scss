@@ -6,9 +6,14 @@
     align-items: center;
 
     min-height: 100svh;
-    padding: 50px;
+    padding: 88px 50px 50px 50px;
 
     background-color: $app-background;
     
     font: $default-font;
+
+    & > svg {
+        position: absolute;
+        top: 10px;
+    }
 }
