@@ -21,7 +21,7 @@ function OxygenSuplementationGroup({onOptionChange}) {
                 id="oxygen"
                 text="Sim"
                 icon="left"
-                value={3}
+                value={2}
                 onChange={(event) => onOptionChange(Number(event.target.value))}
             >
                 <IconOxygen />
